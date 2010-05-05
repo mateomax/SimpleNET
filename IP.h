@@ -1,10 +1,14 @@
 class IPv6 {
-//pole 4 bitowe 0110;
-//pole 8 bitowe KLASA ruchu;
-//pole 20 bitowe etykieta przepływu;
-int długość;
-//pole 8 bitów następny nagłówek;
-// 8 bitów TTL;
-//128 bitów adres źródła;
-//128 bitów adres docelowy;
+private:
+unsigned Version :4 = 0110;
+unsigned TrafficClass :8;
+unsigned FlowLabel :20;
+unsigned Lenght :16;
+unsigned NextHeader :8;
+unsigned TTL :8;
+unsigned SourceAddress :128;
+unsigned Destinationaddress :128;
+public:
+IPv6();
+
 };
